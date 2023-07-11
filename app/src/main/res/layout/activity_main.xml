@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
+    android:id="@+id/Loginform"
     tools:context=".MainActivity">
 
     <TextView
@@ -20,18 +21,22 @@
 
     <!-- Login Form -->
     <EditText
+        android:id="@+id/username"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/username"
         android:layout_below="@id/switchlayout"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/rounded_edittext"
-        android:hint="Username"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:layout_margin="10dp"
-        android:padding="20dp"
         android:drawableLeft="@drawable/baseline_person_outline_24"
-        android:drawablePadding="20dp"/>
+        android:drawablePadding="20dp"
+        android:hint="Username"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
 
     <EditText
         android:layout_width="match_parent"
@@ -69,27 +74,52 @@
         android:layout_margin="20dp"/>
 
     <!-- Toggle Button -->
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:id="@+id/switchlayout"
         android:layout_below="@id/signin">
+
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/switchForm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:textColor="#000000"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#000000"
+            android:textColorLink="#FFFFFF"
+            android:textOff=""
+            android:textOn=""
             android:textSize="24sp"
-            android:textOff="Login"
-            android:textOn="Register"
-            app:track="@drawable/custom_switch_track"
             android:thumb="@drawable/custom_switch_thumb"
             app:showText="true"
-             />
+            app:track="@drawable/custom_switch_track" />
+
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@id/switchForm"
+            android:layout_marginLeft="23dp"
+            android:text="Login"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/registerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/switchForm"
+            android:layout_marginRight="17dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Register"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <EditText
