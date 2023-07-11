@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/white" /> <!-- Replace with your desired color for thumb when unchecked -->
+    <size android:width="100dp" android:height="52dp" android:padding="20dp"/> <!-- Replace with desired dimensions -->
+    <corners android:radius="10dp" /> <!-- Adjust the radius to control the roundness of the thumb -->
+</shape>
