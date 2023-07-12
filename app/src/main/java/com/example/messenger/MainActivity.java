@@ -51,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        Loginform.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                closeKeyboard();
+            }
+        });
 
         regbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 if (isChecked) {
+                    closeKeyboard();
                     // Hide login form, show register form
                     username.setVisibility(View.GONE);
                     password.setVisibility(View.GONE);
@@ -76,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     registerPassword.setVisibility(View.VISIBLE);
                     regbtn.setVisibility(View.VISIBLE);
                 } else {
+                    closeKeyboard();
                     // Hide register form, show login form
                     username.setVisibility(View.VISIBLE);
                     password.setVisibility(View.VISIBLE);
