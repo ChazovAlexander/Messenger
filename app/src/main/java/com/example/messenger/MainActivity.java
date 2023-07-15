@@ -43,8 +43,9 @@ public class MainActivity extends AppCompatActivity {
                 if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
                     Toast.makeText(MainActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
                     closeKeyboard();
-                    Loginform.setVisibility(View.GONE);
-                    // Close the keyboard after successful login
+                    Intent intent = new Intent(getApplicationContext(), Messenger.class);
+                    startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(MainActivity.this, "LOGIN FAILED", Toast.LENGTH_SHORT).show();
                     closeKeyboard();
